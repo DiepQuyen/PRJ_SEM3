@@ -7,12 +7,11 @@ namespace CourseManagementApi.Models
         [Key]
         public int EnrollmentId { get; set; }
         public int ClassId { get; set; }
-        public string CustomerInformationId { get; set; }
+        public Class Class { get; set; } = null!;
+        public Guid CustomerInformationId { get; set; }
+        public CustomerInformation CustomerInformation { get; set; } = null!;
         public DateTime EnrollmentDate { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
-        public Class Class { get; set; }  // Navigation Property
-        public CustomerInformation CustomerInformation { get; set; }  // Navigation Property
+        public DateTime? UpdatedAt { get; set; }
     }
 }

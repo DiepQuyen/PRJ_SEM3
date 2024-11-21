@@ -6,12 +6,12 @@ namespace CourseManagementApi.Models
     {
         [Key]
         public int OrderId { get; set; }
-        public string CustomerInformationId { get; set; }
+        public Guid CustomerInformationId { get; set; }
+        public CustomerInformation CustomerInformation { get; set; } = null!;
         public decimal TotalPrice { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
-
-        public CustomerInformation CustomerInformation { get; set; }  // Navigation Property
+        public ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 }

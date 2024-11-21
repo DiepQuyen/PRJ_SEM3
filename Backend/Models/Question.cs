@@ -6,9 +6,9 @@ namespace CourseManagementApi.Models
     {
         [Key]
         public int QuestionId { get; set; }
-        public string QuestionText { get; set; }
-        public string Answer { get; set; }
+        public string QuestionText { get; set; } = null!;
+        public string Answer { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

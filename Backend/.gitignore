@@ -98,3 +98,5 @@ aspnet-https/
 
 # User-specific configuration
 *.vsconfig
+
+Migrations/
